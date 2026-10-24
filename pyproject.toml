@@ -1,0 +1,8 @@
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+# A strict-mock fixture that was declared but never used is a stale fixture: fail on it.
+filterwarnings = ["error::RuntimeWarning"]
+markers = [
+    "integration: tests requiring a GenLayer network with consensus (run with gltest)",
+]
